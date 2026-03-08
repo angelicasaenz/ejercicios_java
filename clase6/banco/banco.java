@@ -2,7 +2,7 @@ package clase6.banco;
 
 import java.util.Scanner;
 
-public class app {
+public class banco {
 
     static Scanner sc = new Scanner(System.in);
     static int numCuenta = 12345;
@@ -127,6 +127,7 @@ public class app {
                         break;
                 
                     default:
+                        System.out.println("Opción inválida");
                         break;
                 }
     
