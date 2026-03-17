@@ -1,5 +1,3 @@
-package ejercicosTutoria;
-
 import java.util.Scanner;
 
 public class ejercicio1 {
