@@ -1,3 +1,6 @@
+
+package unidad1.clase8.vsModularEjercicio1.src;
+
 import java.util.Scanner;
 
 public class App {
