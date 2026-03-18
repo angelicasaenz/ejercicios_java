@@ -13,7 +13,7 @@ public class App {
 
         // Ejercicio 1: Instanciar dos objetos de la clase Short usando el constructor por defecto y el constructor con parámetros
         // Con parametros
-        Short short2 = new Short("Ana", "Gatos jugando");
+        Short short2 = new Short("Linkin Park", "What I've Done ");
         // Sin parametros
         Short short3 = new Short();
         short3.setAutor("Korn");
@@ -31,11 +31,11 @@ public class App {
         
        
         //Ejercicio 3: Escribir por consola los atributos de los objetos. Tip: Debes acceder a los atributos usando métodos getters
-        //ejemplo: System.out.PrintLn( miVuelo.getOrigen() );
-        System.out.println(v1.getDestino(), v1.getOrigen(), v1.getFecha(), v1.getPasajeros());
-        System.out.println(v2.getOrigen());
-        System.out.println(short2.getAutor());
-        System.out.println();
+        System.out.println("VUELO 1 \n Destino: " + v1.getDestino() + ", Origen: " + v1.getOrigen() + ", Fecha: " + v1.getFecha() + ", Pasajeros: " + v1.getPasajeros());
+        System.out.println("VUELO 2 \n Destino: " + v2.getDestino() + ", Origen: " + v2.getOrigen() + ", Fecha: " + v2.getFecha() + ", Pasajeros: " + v2.getPasajeros());
+        System.out.println("SHORT 1 \n Autor: " +short1.getAutor() + ", Titulo: "+ short1.getTitulo());
+        System.out.println("SHORT 2 \n Autor: " +short2.getAutor() + ", Titulo: "+ short2.getTitulo());
+        System.out.println("SHORT 3 \n Autor: " +short3.getAutor() + ", Titulo: "+ short3.getTitulo());
 
     }
 }
