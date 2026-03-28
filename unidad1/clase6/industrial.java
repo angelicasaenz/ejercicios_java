@@ -11,11 +11,15 @@ public class industrial {
     static String danioMaquina;
     static int piezasProducir; 
     public static void main(String[] args) throws Exception{
-        operario();
-        menu();
+        if (operario()) {
+            menu();
+        }else {
+            System.out.println("Acceso bloqueado");
+        }
+        
     }
 
-    public static void operario() {
+    public static boolean operario() {
 
         int codEmpleado = 4567;
         int turno = 0;
@@ -29,15 +33,15 @@ public class industrial {
             
             if (codEmpleado == codIngresado && turno > 0 && turno <= 3) {
                 System.out.println("Acceso permitido");
-                
+                return true;
             } else {
                 System.out.println("Acceso denegado");
                 intentos++;
             }
-        } while (intentos > 3);
+        } while (intentos < 3);
 
         sc.nextLine();
-
+        return false;
     }
 
     public static void menu(){
@@ -66,7 +70,7 @@ public class industrial {
                 piezasProducir = sc.nextInt();
                 double materiaNecesaria = piezasProducir * matPrimaxPieza;
                 if (piezasProducir > 0 && piezasProducir <= prodMax) {
-                    stockMatPrima -= (piezasProducir * 25);
+                    stockMatPrima -= (piezasProducir * matPrimaxPieza);
                     System.out.println("Producción realizada con exito");
                     System.out.printf("Stock restante: %d kg", stockMatPrima );
                 } else if (stockMatPrima < materiaNecesaria) {
