@@ -1,4 +1,4 @@
-public class Vehiculo {
+public abstract class Vehiculo {
 
     private String marca;
     private String modelo;
@@ -41,5 +41,10 @@ public class Vehiculo {
         this.anio = anio;
     } */
 
-
+    public void mostrarInformacion(){
+        System.out.println("Marca: " + marca + " Modelo: " + modelo + " Año: " + anio);
+    }
+    public void mover(){
+        System.out.println("El vehiculo se esta moviendo");
+    }
 }

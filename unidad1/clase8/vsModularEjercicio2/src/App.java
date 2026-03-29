@@ -9,7 +9,7 @@ public class App {
         
         double precio = 120000;
         double descuento = 0;
-        if (tieneDescuento(descuento, precio)) {
+        if (tieneDescuento(precio)) {
             descuento = precio * 0.10;
         }
         double precioFinal = calcularPrecioTotal(precio, descuento);
@@ -18,7 +18,7 @@ public class App {
 
     
     // Tiene descuento?
-    public static boolean tieneDescuento(double descuento, double precio) {
+    public static boolean tieneDescuento(double precio) {
         return precio > 100000;
     }
 
