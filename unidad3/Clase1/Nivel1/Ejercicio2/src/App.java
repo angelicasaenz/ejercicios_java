@@ -22,14 +22,17 @@ public class App {
         
         int[] arreglo = {27, 23, 54, 26, 56};
 
+        try {
+
         System.out.println("Ingrese la posición a consultar: ");
         int posicion = sc.nextInt();
-        int posicionEncontrada; 
-        for(int i = 0; i < arreglo.length; i++){
-            if (i == posicion) {
-                
-            }
+        System.out.println("Posición buscada: " + arreglo[posicion]);         
+        
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Posición no encontrada :( ");
         }
+        
+    }
 
     }
-}
+
