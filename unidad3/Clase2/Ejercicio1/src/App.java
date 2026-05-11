@@ -2,7 +2,38 @@ public class App {
 
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        Biblioteca virgilioBarco = new Biblioteca();
+        Libro l1 = new Libro("Noches Blancas", 3);
+        Libro l2 = new Libro("La muerte feliz", 10);
+        Libro l3 = new Libro("La peste", 2);
+        
+
+        // Solicitar prestamo
+        // Libro 1
+        try {
+            virgilioBarco.procesarPrestamo(l1, 2);
+            System.out.println("Se ha prestado correctamente el libro: " + l1.getTitulo());
+        } catch (CantidadInvalidaException | LibroNoDisponibleException e) {
+            System.out.println("Error con " + l1.getTitulo() + ": " + e.getMessage());
+        }
+
+        // Libro 2
+        try {
+            virgilioBarco.procesarPrestamo(l2, 0);
+            System.out.println("Se ha prestado correctamente el libro: " + l2.getTitulo());
+        } catch (CantidadInvalidaException | LibroNoDisponibleException e) {
+            System.out.println("Error con " + l2.getTitulo() + ": " + e.getMessage());
+        }
+
+        // Libro 3
+        try {
+            virgilioBarco.procesarPrestamo(l3, 6);
+            System.out.println("Se ha prestado correctamente el libro: " + l3.getTitulo());
+        } catch (CantidadInvalidaException | LibroNoDisponibleException e) {
+            System.out.println("Error con " + l3.getTitulo() + ": " + e.getMessage());
+        }
+        
     }
 }
 

@@ -2,8 +2,8 @@ public class Libro {
 
     // Atributos
 
-    String titulo;
-    int cantidadDisponible;
+    private String titulo;
+    private int cantidadDisponible;
 
     // Constructor 
     public Libro(String titulo, int cantidadDisponible){
@@ -11,13 +11,21 @@ public class Libro {
         this.cantidadDisponible = cantidadDisponible;
     }
 
+    // Metodo get
+
+    public String getTitulo(){
+        return this.titulo;
+    }
+
     // Metodo prestar
 
-    public void prestar(int cantidad){
-
-        if (cantidad > 0 && cantidad <= cantidadDisponible) {
-            
-            
+    public void prestar(int cantidad) throws CantidadInvalidaException, LibroNoDisponibleException{
+        if (cantidad <= 0) {
+            throw new CantidadInvalidaException("Cantidad invalida");
+        } else if (cantidad > cantidadDisponible) {
+            throw new LibroNoDisponibleException("Libro no disponible :( ");
+        } else {
+            cantidadDisponible -= cantidad;
         }
     }
 
