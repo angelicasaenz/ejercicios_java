@@ -1,0 +1,14 @@
+may 13, 2026 2:51:20 A. M. App main
+GRAVE: Error al retirar dinero
+may 13, 2026 2:52:04 A. M. CuentaBancaria retirarDinero
+ADVERTENCIA: Intento de retiro superior al saldo
+may 13, 2026 2:52:04 A. M. App main
+GRAVE: Error al retirar dinero
+may 13, 2026 2:52:11 A. M. CuentaBancaria retirarDinero
+ADVERTENCIA: Intento de retiro superior al saldo
+may 13, 2026 2:52:11 A. M. App main
+GRAVE: Error al retirar dinero
+may 13, 2026 2:56:18 A. M. CuentaBancaria retirarDinero
+ADVERTENCIA: Intento de retiro superior al saldo
+may 13, 2026 2:56:18 A. M. App main
+GRAVE: Error al retirar dineroSaldo insuficiente
